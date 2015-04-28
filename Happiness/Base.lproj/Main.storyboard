@@ -19,6 +19,11 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z0b-za-jz3" customClass="HappinessView" customModule="Happiness" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,10 +34,13 @@
                             <constraint firstItem="z0b-za-jz3" firstAttribute="top" secondItem="hWv-c4-TK5" secondAttribute="top" id="r5c-KV-2Xt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="happinessView" destination="z0b-za-jz3" id="QzN-tT-9bW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRJ-9v-kfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="423"/>
+            <point key="canvasLocation" x="306" y="429"/>
         </scene>
     </scenes>
 </document>

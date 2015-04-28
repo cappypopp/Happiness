@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol HappinessViewDataSource: class {
+    func smilinessForHappinessView(sender: HappinessView) -> Double?
+}
+
 @IBDesignable
 class HappinessView: UIView {
     
@@ -66,6 +71,10 @@ class HappinessView: UIView {
         return path
     }
     
+    // delegate - make sure weak since controller already has a view reference
+    // have to make sure that protocol is a class-only type so we can use weak here
+    weak var dataSource: HappinessViewDataSource?
+    
     var faceCenter: CGPoint {
         return CGPoint(x: frame.size.width/2, y: frame.size.height/2)
     }
@@ -89,7 +98,7 @@ class HappinessView: UIView {
         bezierPathForEye(Eye.Left).stroke()
         bezierPathForEye(Eye.Right).stroke()
         
-        let smiliness = 0.1
+        let smiliness = dataSource?.smilinessForHappinessView(self) ?? 0.0
         let smilePath = bezierPathForMouth(smiliness)
         smilePath.stroke()
     }
