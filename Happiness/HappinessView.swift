@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class HappinessView: UIView {
     
     private struct Scaling {
@@ -71,8 +72,12 @@ class HappinessView: UIView {
     var faceRadius: CGFloat {
             return min(frame.size.width, frame.size.height)/2 * scale
     }
+    
+    @IBInspectable
     var scale: CGFloat = 0.9 { didSet { setNeedsDisplay() }}
+    @IBInspectable
     var strokeColor: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() }}
+    @IBInspectable
     var strokeWidth: CGFloat = 3.0 { didSet { setNeedsDisplay() }}
     
     override func drawRect(rect: CGRect) {
@@ -84,7 +89,7 @@ class HappinessView: UIView {
         bezierPathForEye(Eye.Left).stroke()
         bezierPathForEye(Eye.Right).stroke()
         
-        let smiliness = 0.5
+        let smiliness = 0.1
         let smilePath = bezierPathForMouth(smiliness)
         smilePath.stroke()
     }
