@@ -71,6 +71,13 @@ class HappinessView: UIView {
         return path
     }
     
+    func faceScale(recognizer: UIPinchGestureRecognizer) {
+        if recognizer.state == .Changed {
+            scale *= recognizer.scale
+            recognizer.scale = 1 // reset scale so we always start from last
+        }
+    }
+    
     // delegate - make sure weak since controller already has a view reference
     // have to make sure that protocol is a class-only type so we can use weak here
     weak var dataSource: HappinessViewDataSource?

@@ -14,6 +14,7 @@ class HappinessViewController: UIViewController, HappinessViewDataSource {
     @IBOutlet weak var happinessView: HappinessView! {
         didSet {
             happinessView.dataSource = self
+            happinessView.addGestureRecognizer(UIPinchGestureRecognizer(target: happinessView, action: "faceScale:"))
         }
     }
     
@@ -29,8 +30,28 @@ class HappinessViewController: UIViewController, HappinessViewDataSource {
         }
     }
     
+    private struct Constants {
+        // for every point here we need to move that many points in the pan to change our happiness
+        static let HappinessPanGestureScale: CGFloat = 3
+    }
+    
     private func updateUI() {
         happinessView.setNeedsDisplay()
+    }
+    
+    @IBAction func changeHappiness(sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .Ended: fallthrough
+        case .Changed:
+            let xlationInMyCoords = sender.translationInView(happinessView)
+            // let happinessChange = -xlationInMyCoords.y  // NO: too big of a change when small pans
+            let happinessChange = -Int(xlationInMyCoords.y / Constants.HappinessPanGestureScale)
+            if happinessChange != 0 {
+                happiness += happinessChange
+                sender.setTranslation(CGPointZero, inView: happinessView)
+            }
+        default: break
+        }
     }
     
     func smilinessForHappinessView(sender: HappinessView) -> Double? {
