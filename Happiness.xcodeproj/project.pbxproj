@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		38AEC3EA1AE7E3B300FF76D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEC3E91AE7E3B300FF76D5 /* AppDelegate.swift */; };
-		38AEC3EC1AE7E3B300FF76D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEC3EB1AE7E3B300FF76D5 /* ViewController.swift */; };
 		38AEC3EF1AE7E3B300FF76D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AEC3ED1AE7E3B300FF76D5 /* Main.storyboard */; };
 		38AEC3F11AE7E3B300FF76D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AEC3F01AE7E3B300FF76D5 /* Images.xcassets */; };
 		38AEC3F41AE7E3B300FF76D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AEC3F21AE7E3B300FF76D5 /* LaunchScreen.xib */; };
 		38AEC4001AE7E3B300FF76D5 /* HappinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEC3FF1AE7E3B300FF76D5 /* HappinessTests.swift */; };
+		38AEC40A1AE7E44A00FF76D5 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEC4091AE7E44A00FF76D5 /* HappinessViewController.swift */; };
+		38AEC40C1AE7E4B900FF76D5 /* HappinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEC40B1AE7E4B900FF76D5 /* HappinessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		38AEC3E41AE7E3B300FF76D5 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AEC3E81AE7E3B300FF76D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38AEC3E91AE7E3B300FF76D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38AEC3EB1AE7E3B300FF76D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38AEC3EE1AE7E3B300FF76D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38AEC3F01AE7E3B300FF76D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38AEC3F31AE7E3B300FF76D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		38AEC3F91AE7E3B300FF76D5 /* HappinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AEC3FE1AE7E3B300FF76D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38AEC3FF1AE7E3B300FF76D5 /* HappinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessTests.swift; sourceTree = "<group>"; };
+		38AEC4091AE7E44A00FF76D5 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
+		38AEC40B1AE7E4B900FF76D5 /* HappinessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,10 @@
 		38AEC3E61AE7E3B300FF76D5 /* Happiness */ = {
 			isa = PBXGroup;
 			children = (
-				38AEC3E91AE7E3B300FF76D5 /* AppDelegate.swift */,
-				38AEC3EB1AE7E3B300FF76D5 /* ViewController.swift */,
 				38AEC3ED1AE7E3B300FF76D5 /* Main.storyboard */,
-				38AEC3F01AE7E3B300FF76D5 /* Images.xcassets */,
-				38AEC3F21AE7E3B300FF76D5 /* LaunchScreen.xib */,
+				38AEC4091AE7E44A00FF76D5 /* HappinessViewController.swift */,
 				38AEC3E71AE7E3B300FF76D5 /* Supporting Files */,
+				38AEC40B1AE7E4B900FF76D5 /* HappinessView.swift */,
 			);
 			path = Happiness;
 			sourceTree = "<group>";
@@ -90,6 +90,9 @@
 		38AEC3E71AE7E3B300FF76D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38AEC3F21AE7E3B300FF76D5 /* LaunchScreen.xib */,
+				38AEC3F01AE7E3B300FF76D5 /* Images.xcassets */,
+				38AEC3E91AE7E3B300FF76D5 /* AppDelegate.swift */,
 				38AEC3E81AE7E3B300FF76D5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38AEC3EC1AE7E3B300FF76D5 /* ViewController.swift in Sources */,
+				38AEC40C1AE7E4B900FF76D5 /* HappinessView.swift in Sources */,
+				38AEC40A1AE7E44A00FF76D5 /* HappinessViewController.swift in Sources */,
 				38AEC3EA1AE7E3B300FF76D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
